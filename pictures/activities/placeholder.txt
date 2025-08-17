@@ -1,0 +1,7 @@
+This folder will contain art and craft activity images.
+Expected files:
+- art-demo.jpg
+- art-result.jpg
+- art-group.jpg
+
+The gallery will show placeholder content until actual images are added.
