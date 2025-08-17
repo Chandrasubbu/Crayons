@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Crayons Montessori</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">        <a class="logo bounce" href="index.html">
+          <img src="pictures/logos/logo-main.svg" alt="Crayons Montessori" class="logo-img">
+        </a>
+      <button class="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="dropdown">
+          <a class="nav-link" href="programs.html">Programs <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="toddler-program.html">Toddler Program</a></li>
+            <li><a href="playgroup.html">Playgroup</a></li>
+            <li><a href="pre-nursery.html">Pre-Nursery</a></li>
+            <li><a href="nursery.html">Nursery</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link active" href="contactus.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contact Hero Section -->
+  <section class="contact-hero">
+    <div class="hero-bg">
+      <div class="shape s1"></div>
+      <div class="shape s2"></div>
+      <div class="shape s3"></div>
+    </div>
+    <div class="container">
+      <div class="contact-hero-content">
+        <h1>Get in Touch</h1>
+        <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Main Section -->
+  <section class="contact-main">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Address Section -->
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-card-header">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Visit Our School</h3>
+            </div>
+            <div class="contact-details">
+              <div class="address-block">
+                <h4>Crayons Montessori School</h4>
+                <p>123 Education Lane<br>
+                Ranchi, Jharkhand 834001<br>
+                India</p>
+              </div>
+              
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <strong>Phone</strong>
+                  <p>+91 98765 43210</p>
+                  <p>+91 87654 32109</p>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <strong>Email</strong>
+                  <p>info@crayonsmontessori.com</p>
+                  <p>admissions@crayonsmontessori.com</p>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <strong>School Hours</strong>
+                  <p>Monday - Friday: 8:00 AM - 4:00 PM</p>
+                  <p>Saturday: 9:00 AM - 1:00 PM</p>
+                  <p>Sunday: Closed</p>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <i class="fas fa-calendar-alt"></i>
+                <div>
+                  <strong>Office Hours</strong>
+                  <p>Monday - Saturday: 9:00 AM - 5:00 PM</p>
+                  <p>For admissions and enquiries</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="contact-form-section">
+          <div class="contact-card">
+            <div class="contact-card-header">
+              <i class="fas fa-paper-plane"></i>
+              <h3>Parent Enquiry Form</h3>
+            </div>
+            <p class="form-description">Please fill out the form below and we'll get back to you within 24 hours.</p>
+            
+            <form id="contactForm" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="parentName">Parent/Guardian Name *</label>
+                  <input type="text" id="parentName" name="parentName" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Phone Number *</label>
+                  <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                  <label for="childName">Child's Name *</label>
+                  <input type="text" id="childName" name="childName" required>
+                </div>
+              </div>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="childAge">Child's Age</label>
+                  <select id="childAge" name="childAge">
+                    <option value="">Select Age</option>
+                    <option value="1.5-2">1.5 - 2 years</option>
+                    <option value="2-3">2 - 3 years</option>
+                    <option value="3-4">3 - 4 years</option>
+                    <option value="4-5">4 - 5 years</option>
+                    <option value="5-6">5 - 6 years</option>
+                    <option value="6+">6+ years</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="program">Program of Interest</label>
+                  <select id="program" name="program">
+                    <option value="">Select Program</option>
+                    <option value="toddler">Toddler Program (1.5-3 years)</option>
+                    <option value="primary">Primary Program (3-6 years)</option>
+                    <option value="elementary">Elementary Program (6-12 years)</option>
+                    <option value="summer">Summer Camp</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="preferredStartDate">Preferred Start Date</label>
+                <input type="date" id="preferredStartDate" name="preferredStartDate">
+              </div>
+              
+              <div class="form-group">
+                <label for="enquiryType">Type of Enquiry</label>
+                <select id="enquiryType" name="enquiryType">
+                  <option value="admission">Admission Information</option>
+                  <option value="tour">School Tour</option>
+                  <option value="curriculum">Curriculum Details</option>
+                  <option value="fees">Fee Structure</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Message/Additional Information</label>
+                <textarea id="message" name="message" rows="4" placeholder="Please share any specific questions or requirements..."></textarea>
+              </div>
+              
+              <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="newsletter" value="yes">
+                  <span class="checkmark"></span>
+                  I would like to receive updates about school events and programs
+                </label>
+              </div>
+              
+              <button type="submit" class="btn btn-primary btn-full">
+                <i class="fas fa-paper-plane"></i>
+                Send Enquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Map Section -->
+  <section class="map-section">
+    <div class="container">
+      <div class="map-header">
+        <h2>Find Us</h2>
+        <p>Located in the heart of Ranchi, easily accessible by public transport</p>
+      </div>
+    </div>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps?q=Crayons+Montessori+School,+Opp+Rock+Garden,+Kanke+Road,+Gandhi+Nagar,+Ranchi+834008&output=embed"
+        height="400" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Crayons Montessori School Location">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+        </button>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const button = this.querySelector('button[type="submit"]');
+      
+      // Add submitting state
+      button.classList.add('submitting');
+      
+      // Simulate form submission (replace with actual form submission)
+      setTimeout(() => {
+        button.classList.remove('submitting');
+        button.classList.add('success');
+        
+        // Reset form and button state after 2 seconds
+        setTimeout(() => {
+          button.classList.remove('success');
+          e.target.reset();
+        }, 2000);
+      }, 1500);
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Crayons Montessori</h4>
+        <p>Nurturing young minds with 19 years of Montessori excellence in Ranchi.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
